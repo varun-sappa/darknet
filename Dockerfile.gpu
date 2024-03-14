@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.6.0-cudnn8-devel-ubuntu20.04 AS builder
+FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04 AS builder
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -18,7 +18,7 @@ RUN rm Docker-compose.yml
 
 RUN make
 
-FROM nvidia/cuda:11.6.0-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
